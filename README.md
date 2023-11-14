@@ -1,46 +1,36 @@
 <h1 align="center">Meeti Clone App</h1>
 
 ```scss
-@mixin boton($bgColor, $colorTexto) {
-    background-color: $bgColor;
-    padding: 1.5rem 4rem;
-    color: $colorTexto;
-    margin-top: 2rem;
-    font-size: 2rem;
-    font-weight: 400;
-    display: inline-block;
-    font-weight: 700;
-    border: none;
-    transition-property: background-color;
-    transition-duration: .3s;
-    text-align: center;
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
 
-    @include tablet {
-        width: auto;
-    }
+.header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
 
-    &:hover {
-        background-color: darken($bgColor, 10%);
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
-
 ```
 
 ## About the project
-
 <table width="100%">
     <tbody width="100%">
         <tr>
             <td rowspan=5 align="rigth">
-                <img src="https://github.com/marcosguz/escuela-cocina/assets/75583218/1f0841e1-cf2d-4693-9c93-20e36f482302" width="500px">
+                <img src="https://github.com/marcosguz/meeti-clone/assets/75583218/bcdfa35f-3b75-414f-82c8-8d34ff8df89f" width="500px">
             </td>
         </tr>
         <tr>
-            <td align="justify">This web application is developed for educational purposes to implement code preprocessor. It is quite simple to use: you just have to choose the cooking course that you like the most and its information will be displayed.</td>
+            <td align="justify">This web application is developed for educational purposes to implement preprocessor code.</td>
         </tr>
         <tr>
             <td align="justify">
-				<a href="https://escuela-cocina-app.netlify.app/">Escuela de Cocina App</a>
+				<a href="https://meeti-clone.netlify.app/">Meeti Clone App</a>
 			</td>
         </tr>
     </tbody>
